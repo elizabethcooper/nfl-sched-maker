@@ -2,6 +2,6 @@
     width: 30% !important;
 }
 
-body {
-    text-align: center;
+.login-form div {
+    margin: auto;
 }
