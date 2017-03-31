@@ -1,7 +1,7 @@
-.login-form {
+.login-form input{
     width: 30% !important;
 }
 
 .login-form div {
-    margin: auto;
+    margin: auto !important;
 }
