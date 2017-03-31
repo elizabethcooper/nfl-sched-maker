@@ -17,12 +17,16 @@
     </head>
     <body>
         <h1>Login Form</h1>
-        <div class="login-form">
-            <form action="#">
-                <input type="text" name="username" placeholder="username">
-                <input type="password" name="password" placeholder="password">
-                <input type="submit" value="login">
-            </form>
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+        </form>
     </body>
 </html>
