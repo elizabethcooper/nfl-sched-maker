@@ -18,3 +18,13 @@ function openCity(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+$("table .active").delegate('td','mouseover mouseout', function(e) {
+    if (e.type == 'mouseover') {
+        console.log('hovering over row');
+        $(this).parent().addClass("gray-rollover");
+    }
+    else {
+        $(this).parent().removeClass("gray-rollover");
+    }
+});

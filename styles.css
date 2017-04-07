@@ -79,3 +79,7 @@ div.tab button.active {
     border-top: none;
     margin-left: 140px;
 }
+
+.btn {
+    background-color: lightgrey;
+}
