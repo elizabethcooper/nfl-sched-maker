@@ -14,7 +14,7 @@
 }
 
 .glyphicon {
-    color: white;
+    color: black;
 }
 
 .container {
@@ -82,4 +82,17 @@ div.tab button.active {
 
 .btn {
     background-color: lightgrey;
+    height: 6vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.prefGlyphicon {
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.logo {
+    display: inline-block;
+    width: 10vh;
 }

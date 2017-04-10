@@ -17,8 +17,11 @@
 <body>
     <div class="container">
         <div class="header">
-            <h3 style="margin: 0px 40px 0px 0px; display: inline-block">Logo</h3>
+            <img class="logo" src="NFLlogo.png"/>
             <a href="#" style="display: inline-block; font-size: 25px"><span class="glyphicon glyphicon-question-sign"></span></a>
+            <a style="float:right; margin-left: 10px; margin-right: 10px" href="#" class="btn">Logout</a>
+            <a style="float:right; margin-left: 10px; margin-right: 10px" href="#" class="btn">Edit Profile</a>
+            <h2 style="display: inline-block; line-height: 10vh; margin: 0; float: right">John D.</h2>
         </div>
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'Schedule')">Schedule</button>
@@ -95,13 +98,34 @@
 
         <div id="Preferences" class="tabcontent">
             <h3>Preferences</h3>
-            <table>
+            <table class="table">
                 <tr>
                     <td></td>
                     <td>Team</td>
                     <td>Preference</td>
                     <td>Value</td>
                     <td>Notes</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-remove prefGlyphicon"></span><span class="glyphicon glyphicon-move prefGlyphicon"></span></td>
+                    <td>Falcons</td>
+                    <td>Max Travel Distance</td>
+                    <td>300 Miles</td>
+                    <td><a href="#"><span class="glyphicon glyphicon-collapse-down"></span></a></td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-remove prefGlyphicon"></span><span class="glyphicon glyphicon-move prefGlyphicon"></span></td>
+                    <td>Teaxans</td>
+                    <td>Min Home Gamese</td>
+                    <td>8 Games</td>
+                    <td><span class="glyphicon glyphicon-collapse-down"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-remove prefGlyphicon"></span><span class="glyphicon glyphicon-move prefGlyphicon"></span></td>
+                    <td>Panthers</td>
+                    <td># Night Games</td>
+                    <td>2 Games</td>
+                    <td><span class="glyphicon glyphicon-collapse-down"></span></td>
                 </tr>
             </table>
         </div>
