@@ -9,11 +9,21 @@ $(document).ready(function(){
       updateScheduleTable(schedule);
     });
   });
+  
+  $("#week").change(function() {
+    var scheduleTable = $('#exportTlb');
+    scheduleTable.find("tr:gt(0)").remove();
+    var week = this.value;
+    if (week > 0) {
+      updateScheduleToWeek(week);
+    } else if (week == 0) {
+      updateScheduleTable(schedule);
+    }
+  });
 });
 
 function updateScheduleTable(schedule){
   for (week in schedule) {
-    alert(week);
     for (game in schedule[week]) {
       date = dates[week-1]
       game = schedule[1][game];
@@ -37,4 +47,13 @@ function httpGetAsync(theUrl, callback)
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
+}
+
+function updateScheduleToWeek(weekNum) {
+  for (game in schedule[weekNum]) {
+    date = dates[weekNum-1]
+    game = schedule[1][game];
+    var scheduleTableLastRow = $('#exportTlb tr:last');
+    scheduleTableLastRow.after(buildTableRow(date, game));
+  }
 }
