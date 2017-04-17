@@ -52,7 +52,7 @@ function httpGetAsync(theUrl, callback)
 function updateScheduleToWeek(weekNum) {
   for (game in schedule[weekNum]) {
     date = dates[weekNum-1]
-    game = schedule[1][game];
+    game = schedule[weekNum][game];
     var scheduleTableLastRow = $('#exportTlb tr:last');
     scheduleTableLastRow.after(buildTableRow(date, game));
   }
