@@ -4,7 +4,7 @@ var broadcasters = ["FOX", "NBC", "CBS"]
                     
 $(document).ready(function(){
   $("#generate_schedule_button").click(function(){
-    httpGetAsync('http://nfl-schedule-maker.herokuapp.com/dummySchedule', function(data) {
+    httpGetAsync('https://nfl-schedule-maker.herokuapp.com/dummySchedule', function(data) {
       schedule = jQuery.parseJSON(data);
       updateScheduleTable(schedule);
     });
