@@ -26,14 +26,19 @@
             <h2 style="display: inline-block; line-height: 10vh; margin: 0; float: right">John D.</h2>
         </div>
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Schedule')">Schedule</button>
+            <button class="tablinks active" onclick="openCity(event, 'Schedule')">Schedule</button>
             <button class="tablinks" onclick="openCity(event, 'Preferences')">Preferences</button>
             <button class="tablinks" onclick="openCity(event, 'Rules')">Rules</button>
             <button class="tablinks" onclick="openCity(event, 'AdminConsole')">Admin Console</button>
         </div>
 
-        <div id="Schedule" class="tabcontent">
-            <h3>Schedule</h3>
+        <div id="Schedule" class="tabcontent active">
+            <h3 style="display: inline-block">Schedule</h3>
+            <select name="week" id="week">
+                <option value="w1">Week 1</option>
+                <option value="w2">Week 2</option>
+                <option value="w3">Week 3</option>
+            </select>
             <div style="height:40vh;overflow:auto;">
                 <table class="table" id="exportTlb">
                     <tr>
@@ -99,6 +104,7 @@
                 </table>
             </div>
             <button class="btn export" onclick="exportTable()">Export</button>
+            <button class="btn export" style="margin-right: 10px">Generate</button>
         </div>
 
         <div id="Preferences" class="tabcontent">
