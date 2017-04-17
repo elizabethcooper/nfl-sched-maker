@@ -46,7 +46,7 @@ function httpGetAsync(theUrl, callback)
             callback(xmlHttp.responseText);
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous
-    xmlHttp.send(null);
+    xmlHttp.send(null); 
 }
 
 function updateScheduleToWeek(weekNum) {
