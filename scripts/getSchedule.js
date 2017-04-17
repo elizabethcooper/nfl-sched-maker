@@ -1,7 +1,7 @@
 var schedule;
 var dates = ["10/1","10/8","10/15","10/22","10/29","11/5","11/12","11/19","11/26","12/3","12/10","12/17","12/25","1/1","1/8","1/15"];
-var broadcasters = ["FOX", "NBC", "CBS"]                 
-                    
+var broadcasters = ["FOX", "NBC", "CBS"]
+
 $(document).ready(function(){
   $("#generate_schedule_button").click(function(){
     httpGetAsync('https://nfl-schedule-maker.herokuapp.com/dummySchedule', function(data) {
@@ -9,10 +9,10 @@ $(document).ready(function(){
       updateScheduleTable(schedule);
     });
   });
-  
+
   $("#week").change(function() {
     var scheduleTable = $('#exportTlb');
-    scheduleTable.find("tr:gt(0)").remove();
+    clearTableEntries(scheduleTable);
     var week = this.value;
     if (week > 0) {
       updateScheduleToWeek(week);
@@ -41,11 +41,11 @@ function buildTableRow(date, game){
 function httpGetAsync(theUrl, callback)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
+    xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
     xmlHttp.send(null);
 }
 
@@ -56,4 +56,8 @@ function updateScheduleToWeek(weekNum) {
     var scheduleTableLastRow = $('#exportTlb tr:last');
     scheduleTableLastRow.after(buildTableRow(date, game));
   }
+}
+
+function clearTableEntries(table) {
+  table.find("tr:gt(0)").remove();
 }
